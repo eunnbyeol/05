@@ -5,23 +5,17 @@
 
 int main(int argc, char *argv[]) 
 {
-	int x;
-	int y;
-	char op;
-	int result;
+	char c;
+	int num = 0;
 	
-	printf("enter the calculation :");
-	scanf("%d %c %d", &x, &op, &y);
-	
-	if (op == '+')
-	     result = x + y;
-	else if(op == '-')
-	     result = x - y;
-	else if(op == '*')
-	     result = x * y;
-	else
-	     result = x / y;
-	
-	
-	printf("= %i\n", result);	
+	printf("input a string:");
+	while( (c = getchar() )!= '\n') // 입력 문자가 개행문자가 나올때까지 반복 
+	{
+	    if(c >= '0' && c <= '9')	//입력된 글자(c)가 숫자인가?
+			num = num + 1;    // 그렇다면 하나를 센다.  
+	}
+
+
+	printf("숫자의 개수는 %i개입니다.\n", num);
+	return 0;
 }
