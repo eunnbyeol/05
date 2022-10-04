@@ -5,17 +5,22 @@
 
 int main(int argc, char *argv[]) 
 {
-	char c;
-	int num = 0;
+	int answer= 59;
+	int i;
+	int trial=0;
 	
-	printf("input a string:");
-	while( (c = getchar() )!= '\n') // 입력 문자가 개행문자가 나올때까지 반복 
+	do
 	{
-	    if(c >= '0' && c <= '9')	//입력된 글자(c)가 숫자인가?
-			num = num + 1;    // 그렇다면 하나를 센다.  
-	}
-
-
-	printf("숫자의 개수는 %i개입니다.\n", num);
+	    printf("Guess a number :");	//입력해라 문구 출력 
+		scanf("%d", &i);//입력을 받음
+		if( i < 59)
+		printf("Low!\n");
+		if ( i > 59 )
+		printf("High!\n");   //입력숫자가 정답보다 큰지 작은지 출력 
+		trial++;
+	 } 
+	 while (i != 59);
+	 printf("Number of trial = %i\n", trial); //시도 횟수 출력 
+	 
 	return 0;
 }
