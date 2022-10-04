@@ -5,17 +5,17 @@
 
 int main(int argc, char *argv[]) 
 {
+	int sum = 0;
 	int x;
+	int i;
 	
-	printf("정수 하나를 입력하시오 :");
+	printf("정수를 입력하시오.");
 	scanf("%d", &x);
-
-	if (x < 0)
-	    x = -1*x;
-	    
-	    
-	printf("절대값은 %d입니다.", x);
 	
+	//for 문을 활용해서 1부터 x까지 sum에 더하는 코드 
+	for(i=0; i<=x; i++)// 반복(초기식; 조건식; 증감식)
+	    sum = sum + i;//더하기
 	
+	printf ("더하기 결과는 %i입니다.\n", sum);
 	return 0;
 }
